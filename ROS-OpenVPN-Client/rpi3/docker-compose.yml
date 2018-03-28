@@ -1,0 +1,10 @@
+version: '3'
+services:
+  vpn_ros:
+    build: .
+    image: parloma/ros-openvpn-client:rpi3
+    devices:
+      - /dev/net/tun
+    cap_add:
+      - NET_ADMIN
+
